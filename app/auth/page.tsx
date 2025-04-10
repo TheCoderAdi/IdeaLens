@@ -27,14 +27,17 @@ export default function AuthForm() {
           : { name: username, email, password };
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}${url}`,
-        data
+        data,
+        {
+          withCredentials: true,
+        }
       );
       const token = res.data.token;
 
       if (token) {
         localStorage.setItem("token", token);
         toast.success(res.data.message);
-        router.replace("/");
+        router.replace("/dashboard");
       } else {
         throw new Error("No token returned");
       }
