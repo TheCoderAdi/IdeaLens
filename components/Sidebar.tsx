@@ -11,21 +11,23 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="h-full w-64 bg-muted/40 border-r p-4 flex flex-col">
-      <h2 className="text-xl font-bold mb-6">🎬 Creative Agent</h2>
+    <aside className="w-64 border-r p-4 flex flex-col text-white">
+      <h2 className="text-xl font-bold mb-6 text-center">🎬 IdeaLens</h2>
       <ScrollArea className="flex-1">
         <nav className="space-y-1">
           {routes.map(({ label, path, icon: Icon }) => (
             <Link href={path} key={label}>
               <Button
                 variant={pathname === path ? "default" : "ghost"}
+                size={"lg"}
                 className={cn(
-                  "w-full justify-start gap-2",
-                  pathname === path && "bg-primary text-white"
+                  "w-full justify-start gap-2 cursor-pointer mb-3",
+                  pathname === path &&
+                    "bg-gray-300 text-black hover:bg-gray-200"
                 )}
               >
-                <Icon className="w-5 h-5" />
-                {label}
+                <Icon className="w-7 h-7" />
+                <span className="text-lg font-medium">{label}</span>
               </Button>
             </Link>
           ))}
