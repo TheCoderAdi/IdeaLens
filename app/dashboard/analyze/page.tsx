@@ -38,6 +38,7 @@ export default function AnalyzePage() {
       setResult(response.data);
       toast.success("Analysis complete!");
     } catch (error) {
+      console.log(error);
       toast.error("Failed to analyze. Please try again.");
     } finally {
       setLoading(false);
