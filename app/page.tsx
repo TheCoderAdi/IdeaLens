@@ -15,7 +15,11 @@ export default function Home() {
           directions, mood analysis, and viral song picks for social media.
         </p>
         <Link href="/auth">
-          <Button size="lg" className="text-lg cursor-pointer">
+          <Button
+            size="lg"
+            className="text-lg cursor-pointer"
+            variant={"secondary"}
+          >
             Get Started
           </Button>
         </Link>
@@ -119,7 +123,7 @@ export default function Home() {
         </h2>
         <Link href="/auth">
           <Button size="lg" variant="secondary" className="cursor-pointer">
-            Sign up — It's Free
+            Sign up — It&apos;s Free
           </Button>
         </Link>
       </section>
