@@ -46,3 +46,9 @@ LeadLens is an AI-powered creative assistant that helps you generate, refine, an
    ```bash
    npm run dev
    ```
+
+### Backend Idea
+https://dev.to/aditya_007/building-an-ai-powered-backend-with-nodejs-groq-for-idealens-4921
+
+### Demo Video
+https://www.youtube.com/watch?v=HKQngYsv3_Y
